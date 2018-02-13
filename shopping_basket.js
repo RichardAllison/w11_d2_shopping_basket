@@ -12,4 +12,12 @@ ShoppingBasket.prototype.removeFromBasket = function(item) {
   this.items.splice(index,1)};
 }
 
+ShoppingBasket.prototype.totalCost = function() {
+  let cost = 0;
+  for (var item of this.items) {
+      cost += item.price;
+  }
+return cost;
+}
+
 module.exports = ShoppingBasket;
