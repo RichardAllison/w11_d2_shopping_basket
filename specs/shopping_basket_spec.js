@@ -23,4 +23,12 @@ describe('ShoppingBasket', function() {
     assert.strictEqual(actual, 1);
   })
 
+  it('should be able to remove items from it', function() {
+    basket.addToBasket(item);
+    basket.removeFromBasket(item);
+    const actual = basket.items.length;
+    assert.strictEqual(actual, 0);
+
+  })
+
 })
